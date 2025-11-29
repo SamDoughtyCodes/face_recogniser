@@ -29,7 +29,7 @@ def encode_known_faces(model: str = "hog", encodings_loc: Path = DEFAULT_ENCODEI
 
     # Save the encodings locally
     with encodings_loc.open(mode="wb") as f:
-        pickle.dump(encodings_loc)
+        pickle.dump(encodings_loc, f)
 
 # Call the procedure
 encode_known_faces()
